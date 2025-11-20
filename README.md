@@ -31,6 +31,7 @@ pip install -r requirements.txt
 ```
 MIL_for_HEP/
 ├─ training/                 # Training scripts used to run experiments
+├─ dataset/                  # Contains instructions, and generation scripts
 ├─ analysis_and_plots/       # Scripts to reproduce figures and tables
 ├─ src/                      # Helper functions, and YAML config files
 ├─ requirements.txt
