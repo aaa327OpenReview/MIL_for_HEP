@@ -1,0 +1,50 @@
+
+experiment:
+  model_name: "model_name"
+  dataset: "lo"
+  name: ${experiment.dataset}_${experiment.model_name}
+  db: true
+  save: false
+  wandb: false
+  sweep: false
+
+paths:
+  local_pre_path:
+  ml2_pre_path:
+  pre_path:
+
+save_pth:
+  plots:
+  model_save:
+  checkpoint:
+  cm:
+  sweep_model_save:
+  sweep_CI_plt:
+  sweep_roc_auc_plt:
+  wandb_artifact_dir:
+
+bag_size: 1000
+epochs: 100_000 # practically inifinite
+batch_size: 1024
+dropout: 0.1
+test_split: 0.2
+validation_split: 0.2
+patience: 50
+checkpoint_period: 50
+lr: 0.001
+min_lr: 0.0001
+min_delta: 0.0
+reduce_lr_on_plateau: true
+early_stopping: true
+seed: 42
+activation: "elu"
+use_batch_norm: true
+save_epoch_inerval: 10
+save_batch_interval: 50
+
+columns_to_keep: ['l0_pt', 'l1_pt', 'q0_pt', 'q1_pt', 'l0_phi', 'l1_phi', 'q0_phi',
+                    'q1_phi', 'l0_eta', 'l1_eta', 'q0_eta', 'q1_eta', 'l0_m', 'l1_m',
+                    'q0_m', 'q1_m', 'l0_e', 'l1_e', 'q0_e', 'q1_e', 'met_et', 'met_phi',
+                    'm_ll', 'm_qq', 'pt_ll', 'pt_qq', 'd_phi_ll', 'd_phi_qq',
+                    'l0_id_e-', 'l0_id_e+', 'l1_id_e-', 'l1_id_e+',
+                    'q0_id_dq', 'q0_id_uq', 'q1_id_dq', 'q1_id_uq', 'cHW']
